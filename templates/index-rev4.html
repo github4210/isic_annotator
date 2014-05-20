@@ -123,12 +123,17 @@
 
         <div id="map" class="map"></div>
         <div id="annotatorcontainer"></div>
+        <div id="hoverBar"><img id="objectinfo" class="optionimage" src="static/na.jpg"></img>
+
+        </div>
 
         <div id="toolContainer" ng-controller="AnnotationTool">
 
             <!-- <div class=""> -->
                 <!-- <progress percent="stacked"></progress> -->
             <!-- </div> -->
+
+
 
             <div class="isichead">
                 <span class="isictitle pull-left">
@@ -195,19 +200,6 @@
                           <li role="presentation" class="divider"></li>
 
                     </ul>
-
-                  </div>
-
-                   <div class="btn-group">
-                    <div type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
-                      Go to Step
-                      <span class="caret"></span>
-                    </div>
-                    <ul class="dropdown-menu">
-                      <li ng-repeat="(k,v) in decision_tree"><a href="#" ng-click="gotoStep(k)">{{v.title}}</a></li>
-                    </ul>
-
-                       <div type="button" class="btn btn-inverse" id="objectinfo"></div>
                   </div>
                 </div>
 
@@ -395,21 +387,33 @@
             </div>
 
 
+
             <div class="btn-group"
                  ng-show="compareState('selectpbn', tool_bar_state)">
 
+                <div class="btn"
+                        ng-click="nextStep()">
+                        Skip
+                </div>
+            </div>
 
+            <div class="btn-group pull-right"
+                 ng-show="compareState('selectpbn', tool_bar_state)">
+
+
+                <div class="btn btn-info" ng-show="runningSegmentation">
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
 
                 <div class="btn btn-primary"
                         ng-click="runRegionPaint()">
                         Click to begin
                 </div>
 
-                <div class="btn btn-info" ng-show="runningSegmentation">
-                    <i class="fa fa-spinner fa-spin"></i>
-                </div>
 
             </div>
+
+
 
             <!-- Review selections -->
             <div class="btn-group"
@@ -423,9 +427,7 @@
                     <img class="btnimage" src="{{value.url}}"/>
                 </div>
 
-                <div class="btn" ng-click="clearStep()">
-                    <i class="fa fa-trash-o"></i>
-                </div>
+
             </div>
 
 
@@ -491,9 +493,13 @@
             <div class="btn-group"
                  ng-show="compareState('end', tool_bar_state)">
 
-                <div class="btn btn-inverse" disabled>
-                    <!--[todo: review of selections]-->
-                </div>
+                    <div type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                      Go to Step
+                      <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li ng-repeat="(k,v) in decision_tree"><a href="#" ng-click="gotoStep(k)">{{v.title}}</a></li>
+                    </ul>
 
             </div>
 
@@ -531,11 +537,7 @@
                     <img class="btnimage" src="{{value.url}}"/>
                 </div>
 
-                <div class="btn"
-                     ng-click="clearStep()"
-                     ng-show="select_stack.length">
-                    <i class="fa fa-trash-o"></i>
-                </div>
+
 
 
             </div>

@@ -79,56 +79,58 @@ function rgbToHex(r, g, b) {
 var _labels = [
     { name: 'background', color: [255, 255, 255]},
     { name: 'foreground', color: [255, 255, 255]},
-    { name: '10', color: [251, 0, 13], title: 'Lines' },
-    { name: '20', color: [251, 1, 13], title: 'Lines: Reticular' },
-    { name: '21', color: [251, 2, 13], title: 'Lines: Reticular: Regular' },
-    { name: '22', color: [251, 3, 13], title: 'Lines: Reticular: Thick' },
-    { name: '23', color: [251, 4, 13], title: 'Lines: Reticular: Thin' },
-    { name: '24', color: [251, 5, 13], title: 'Lines: Reticular: Atypical' },
-    { name: '25', color: [251, 6, 13], title: 'Lines: Reticular: Negative Network' },
-    { name: '30', color: [251, 7, 13], title: 'Lines: Radial' },
-    { name: '31', color: [251, 8, 13], title: 'Lines: Radial: Radial lines connected to a common base' },
-    { name: '32', color: [251, 9, 13], title: 'Lines: Radial: Radial lines converging to a central dot' },
-    { name: '33', color: [251, 10, 13], title: 'Lines: Radial: Radial lines, peripheral' },
-    { name: '40', color: [251, 11, 13], title: 'Lines: Branched' },
-    { name: '50', color: [251, 12, 13], title: 'Lines: Parallel and straight' },
-    { name: '51', color: [251, 13, 13], title: 'Lines: Parallel and straight: Furrows' },
-    { name: '52', color: [251, 14, 13], title: 'Lines: Parallel and straight: Ridges' },
-    { name: '53', color: [251, 15, 13], title: 'Lines: Parallel and straight: Fibrallar' },
-    { name: '60', color: [251, 16, 13], title: 'Lines: Curved' },
-    { name: '61', color: [251, 17, 13], title: 'Lines: Curved: Thick' },
-    { name: '62', color: [251, 18, 13], title: 'Lines: Curved: Thin' },
-    { name: '70', color: [236, 252, 0], title: 'Dots & Clods' },
-    { name: '71', color: [236, 252, 1], title: 'Dots & Clods: Dots' },
-    { name: '72', color: [236, 252, 2], title: 'Dots & Clods: Dots: Atypical Dots' },
-    { name: '73', color: [236, 252, 3], title: 'Dots & Clods: Dots: Dots, Four square' },
-    { name: '74', color: [236, 252, 4], title: 'Dots & Clods: Dots: Dots, Circle' },
-    { name: '75', color: [236, 252, 5], title: 'Dots & Clods: Dots: Dots, Lines' },
-    { name: '76', color: [236, 252, 6], title: 'Dots & Clods: Clods' },
-    { name: '77', color: [236, 252, 7], title: 'Dots & Clods: Clods: Atypical Clods' },
-    { name: '80', color: [126, 0, 169], title: 'Structureless' },
-    { name: '81', color: [126, 1, 169], title: 'Structureless: Blue-White Veil' },
-    { name: '82', color: [126, 2, 169], title: 'Structureless: Pseudonetwork' },
-    { name: '83', color: [126, 3, 169], title: 'Structureless: Peripheral brown structureless area' },
-    { name: '100', color: [20, 209, 0], title: 'Vessels' },
-    { name: '101', color: [20, 209, 1], title: 'Vessels: Dots' },
-    { name: '102', color: [20, 209, 2], title: 'Vessels: Clods' },
-    { name: '110', color: [20, 209, 3], title: 'Vessels: Lines' },
-    { name: '111', color: [20, 209, 4], title: 'Vessels: Lines: Straight' },
-    { name: '112', color: [20, 209, 5], title: 'Vessels: Lines: Looped' },
-    { name: '113', color: [20, 209, 6], title: 'Vessels: Lines: Looped: Looped with white Halo' },
-    { name: '114', color: [20, 209, 7], title: 'Vessels: Lines: Curved' },
-    { name: '115', color: [20, 209, 8], title: 'Vessels: Lines: Serpentine' },
-    { name: '116', color: [20, 209, 9], title: 'Vessels: Lines: Helical' },
-    { name: '117', color: [20, 209, 10], title: 'Vessels: Lines: Coiled' },
-    { name: '118', color: [20, 209, 11], title: 'Vessels: Lines: Branched' },
-    { name: '120', color: [20, 209, 12], title: 'Vessels: Milky-red area' },
-    { name: '130', color: [20, 209, 13], title: 'Vessels: Polymorphous vessels' },
-    { name: '140', color: [0, 140, 255], title: 'Other' },
-    { name: '150', color: [1, 140, 255], title: 'Other: Shiny white lines' },
-    { name: '151', color: [2, 140, 255], title: 'Other: Circles' },
-    { name: '152', color: [3, 140, 255], title: 'Other: Pseudopods' },
-    { name: '153', color: [4, 140, 255], title: 'Other: Sharply demarcated scalloped border' }
+    { name: '10', color: [251, 0, 13], icon: "static/rev3/4/1.jpg", title: 'Lines' },
+    { name: '20', color: [251, 1, 13], icon: "static/rev3/4/1/1.jpg", title: 'Lines: Reticular' },
+    { name: '21', color: [251, 2, 13], icon: "static/rev3/4/1/1/1.jpg", title: 'Lines: Reticular: Regular' },
+    { name: '22', color: [251, 3, 13], icon: "static/rev3/4/1/1/2.jpg", title: 'Lines: Reticular: Thick' },
+    { name: '23', color: [251, 4, 13], icon: "static/rev3/4/1/1/3.jpg", title: 'Lines: Reticular: Thin' },
+    { name: '24', color: [251, 5, 13], icon: "static/rev3/4/1/1/4.jpg", title: 'Lines: Reticular: Atypical' },
+    { name: '25', color: [251, 6, 13], icon: "static/rev3/4/1/1/5.jpg", title: 'Lines: Reticular: Negative Network' },
+    { name: '30', color: [251, 7, 13], icon: "static/rev3/4/1/2.jpg", title: 'Lines: Radial' },
+    { name: '31', color: [251, 8, 13], icon: "static/rev3/4/1/2/1.jpg", title: 'Lines: Radial: Radial lines connected to a common base' },
+    { name: '32', color: [251, 9, 13], icon: "static/rev3/4/1/2/2.jpg", title: 'Lines: Radial: Radial lines converging to a central dot' },
+    { name: '33', color: [251, 10, 13], icon: "static/rev3/4/1/2/3.jpg", title: 'Lines: Radial: Radial lines, peripheral' },
+    { name: '40', color: [251, 11, 13], icon: "static/rev3/4/1/3.jpg", title: 'Lines: Branched' },
+    { name: '50', color: [251, 12, 13], icon: "static/rev3/4/1/4.jpg", title: 'Lines: Parallel and straight' },
+    { name: '51', color: [251, 13, 13], icon: "static/rev3/4/1/4/1.jpg", title: 'Lines: Parallel and straight: Furrows' },
+    { name: '52', color: [251, 14, 13], icon: "static/rev3/4/1/4/2.jpg", title: 'Lines: Parallel and straight: Ridges' },
+    { name: '53', color: [251, 15, 13], icon: "static/rev3/4/1/4/3.jpg", title: 'Lines: Parallel and straight: Fibrallar' },
+    { name: '60', color: [251, 16, 13], icon: "static/rev3/4/1/5.jpg", title: 'Lines: Curved' },
+    { name: '61', color: [251, 17, 13], icon: "static/rev3/4/1/5/1.jpg", title: 'Lines: Curved: Thick' },
+    { name: '62', color: [251, 18, 13], icon: "static/rev3/4/1/5/2.jpg", title: 'Lines: Curved: Thin' },
+    { name: '41', color: [251, 19, 13], icon: "static/rev3/4/1/6.jpg", title: 'Lines: Zig Zag' },
+    { name: '70', color: [236, 252, 0], icon: "static/rev3/4/2.jpg", title: 'Dots & Clods' },
+    { name: '71', color: [236, 252, 1], icon: "static/rev3/4/2/1.jpg", title: 'Dots & Clods: Dots' },
+    { name: '72', color: [236, 252, 2], icon: "static/rev3/4/2/1/1.jpg", title: 'Dots & Clods: Dots: Atypical Dots' },
+    { name: '73', color: [236, 252, 3], icon: "static/rev3/4/2/1/2.jpg", title: 'Dots & Clods: Dots: Dots, Four square' },
+    { name: '74', color: [236, 252, 4], icon: "static/rev3/4/2/1/3.jpg", title: 'Dots & Clods: Dots: Dots, Circle' },
+    { name: '75', color: [236, 252, 5], icon: "static/rev3/4/2/1/4.jpg", title: 'Dots & Clods: Dots: Dots, Lines' },
+    { name: '76', color: [236, 252, 6], icon: "static/rev3/4/2/2.jpg", title: 'Dots & Clods: Clods' },
+    { name: '77', color: [236, 252, 7], icon: "static/rev3/4/2/2/1.jpg", title: 'Dots & Clods: Clods: Atypical Clods' },
+    { name: '80', color: [126, 0, 169], icon: "static/rev3/4/3.jpg", title: 'Structureless' },
+    { name: '81', color: [126, 1, 169], icon: "static/rev3/4/3/1.jpg", title: 'Structureless: Blue-White Veil' },
+    { name: '82', color: [126, 2, 169], icon: "static/rev3/4/3/2.jpg", title: 'Structureless: Pseudonetwork' },
+    { name: '83', color: [126, 3, 169], icon: "static/rev3/4/3/3.jpg", title: 'Structureless: Peripheral brown structureless area' },
+    { name: '84', color: [126, 4, 169], icon: "static/rev3/4/3/4.jpg", title: 'Structureless: Off-centered blotch' },
+    { name: '100', color: [20, 209, 0], icon: "static/rev3/4/4.jpg", title: 'Vessels' },
+    { name: '110', color: [20, 209, 1], icon: "static/rev3/4/4/1.jpg", title: 'Vessels: Lines' },
+    { name: '111', color: [20, 209, 2], icon: "static/rev3/4/4/1/1.jpg", title: 'Vessels: Lines: Straight' },
+    { name: '112', color: [20, 209, 3], icon: "static/rev3/4/4/1/2.jpg", title: 'Vessels: Lines: Looped' },
+    { name: '113', color: [20, 209, 4], icon: "static/rev3/4/4/1/2/1.jpg", title: 'Vessels: Lines: Looped: Looped with white Halo' },
+    { name: '114', color: [20, 209, 5], icon: "static/rev3/4/4/1/3.jpg", title: 'Vessels: Lines: Curved' },
+    { name: '115', color: [20, 209, 6], icon: "static/rev3/4/4/1/4.jpg", title: 'Vessels: Lines: Serpentine' },
+    { name: '116', color: [20, 209, 7], icon: "static/rev3/4/4/1/5.jpg", title: 'Vessels: Lines: Helical' },
+    { name: '117', color: [20, 209, 8], icon: "static/rev3/4/4/1/6.jpg", title: 'Vessels: Lines: Coiled' },
+    { name: '118', color: [20, 209, 9], icon: "static/rev3/4/4/1/7.jpg", title: 'Vessels: Lines: Branched' },
+    { name: '101', color: [20, 209, 10], icon: "static/rev3/4/4/2.jpg", title: 'Vessels: Dots' },
+    { name: '102', color: [20, 209, 11], icon: "static/rev3/4/4/3.jpg", title: 'Vessels: Clods' },
+    { name: '120', color: [20, 209, 12], icon: "static/rev3/4/4/4.jpg", title: 'Vessels: Milky-red area' },
+    { name: '130', color: [20, 209, 13], icon: "static/rev3/4/4/5.jpg", title: 'Vessels: Polymorphous vessels' },
+    { name: '140', color: [0, 140, 255], icon: "static/rev3/4/5.jpg", title: 'Other' },
+    { name: '150', color: [1, 140, 255], icon: "static/rev3/4/5/1.jpg", title: 'Other: Shiny white lines' },
+    { name: '151', color: [2, 140, 255], icon: "static/rev3/4/5/2.jpg", title: 'Other: Circles' },
+    { name: '152', color: [3, 140, 255], icon: "static/rev3/4/5/3.jpg", title: 'Other: Pseudopods' },
+    { name: '153', color: [4, 140, 255], icon: "static/rev3/4/5/4.jpg", title: 'Other: Sharply demarcated scalloped border' }
 ];
 
 
@@ -325,12 +327,32 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                   });
                   var info = document.getElementById('objectinfo');
 
+
+
+
+
+
                   if (feature) {
+
+                    var icon = feature.get('icon');
+
+
+                      if(icon){
+
+                        info.src = icon;
+
+                        }
+                        else {
+                            info.src = 'static/na.jpg'
+                        }
+
 //                      console.log(feature);
 //                    info.innerHTML = feature.getId() + ': ' + feature.get('name');
-                      info.innerHTML = feature.get('title');
+//                      info.innerHTML = feature.get('title');
                   } else {
-                    info.innerHTML = '&nbsp;';
+
+                      info.src = 'static/na.jpg'
+//                    info.innerHTML = '&nbsp;';
                   }
 
 
@@ -460,9 +482,10 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                         jsObject['properties']['label'] = label
 
                         var hexcolor = rgbToHex(label['color'][0], label['color'][1], label['color'][2])
-                        var rgbcolor = 'rgba(' + label['color'][0] + ',' + label['color'][1] + ',' + label['color'][2] + ',0.2)';
+                        var rgbcolor = 'rgba(' + label['color'][0] + ',' + label['color'][1] + ',' + label['color'][2] + ',0.0)';
 
                         jsObject['properties']['rgbcolor'] = rgbcolor;
+                        jsObject['properties']['icon'] = label.icon;
                         jsObject['properties']['hexcolor'] = hexcolor;
                         jsObject['properties']['title'] = label.title;
 
@@ -475,7 +498,8 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                     }
 
-                    self.segmentannotator.container.hidden = true;
+                    $("#annotatorcontainer").hide();
+//                    self.segmentannotator.container.hidden = true;
 
                     // manually request an updated frame async
                     self.map.render()
@@ -495,10 +519,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                 if(this.segmentannotator){
 
-                    if(!this.segmentannotator.container.hidden){
-                        // it's instantiated
-                        this.segmentannotator.container.hidden = true;
-                    }
+                    $("#annotatorcontainer").hide();
                 }
             },
 
@@ -506,13 +527,9 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                 if(this.segmentannotator){
 
-                    if(this.segmentannotator.container.hidden){
-
-                        // it's instantiated
-                        this.segmentannotator.container.hidden = false;
-                        this.map.render();
-                        return true;
-                    }
+                    $("#annotatorcontainer").show();
+                    this.map.render();
+                    return true;
                 }
                 return false;
             },
@@ -559,6 +576,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                     var canvas = event.context.canvas;
 
                     if(self.segmentannotator){
+
                         self.showPaintLayerIfVisible()
                     }
                     else {
@@ -567,13 +585,19 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                             regionSize: 65,
                             container: document.getElementById('annotatorcontainer'),
                             backgroundColor: [0,0,0],
-                            labels: _labels
-//                            onload: function() {
+                            labels: _labels,
+                            onload: function() {
+                                $("#annotatorcontainer").show();
+                            }
+//                                self.showPaintLayerIfVisible()
+//                                self.segmentannotator.container.hidden = true;
+
 //                              // initializeLegend(this);
 //                              // initializeLegendAdd(this);
 //                              // initializeButtons(this);
 //                            }
                           });
+
                     }
 
                     self.segmentannotator.setCurrentLabel(0);
@@ -1009,7 +1033,6 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
         $scope.runningSegmentation = false;
 
-
         $rootScope.$watch('image_index', function(newValue, originalValue) {
 
             if ($rootScope.applicationReady) {
@@ -1027,29 +1050,13 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
             	$.each($rootScope.image_list, function(n, image_data){
 
-                    //    _id : mongo id,
-                    //    user_id : user mongo_id,
-                    //    image_record_id : image record_id,
-
-//                         annotationid: undefined,
-//                    imageid: image_data.DA_id,
-//                         mskccid: image_data.DA_key,
-
-                    //    startTime : -1,
-                    //    submitTime : -1,
-
                      var placeholder_obj = {
                          annotationid: -1,
                          steps: {}
-//                         userid: $rootScope.current_user_id
-//                         imageid: image_data.DA_id,
-//                         mskccid: image_data.DA_key
                      };
 
                      $scope.annotations.push(placeholder_obj);
                  });
-            	
-//            	console.log('annotations?', $scope.annotations);
             }
         });
 
@@ -1066,10 +1073,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         Mousetrap.bind( ['space'], function(evt) {
             if (typeof (evt.preventDefault) === 'function') {evt.preventDefault();}
             else {evt.returnValue = false}
-
-            console.log('space');
             $scope.nextStep();
-//            $rootScope.debug = !$rootScope.debug;
             $scope.$apply();
         });
 
@@ -1077,11 +1081,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         Mousetrap.bind( ['up'], function(evt) {
             if (typeof (evt.preventDefault) === 'function') {evt.preventDefault();}
             else {evt.returnValue = false}
-
-            console.log('increase value');
             $scope.increaseParameter();
-
-//            $rootScope.debug = !$rootScope.debug;
             $scope.$apply();
 
         });
@@ -1090,11 +1090,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         Mousetrap.bind( ['down'], function(evt) {
             if (typeof (evt.preventDefault) === 'function') {evt.preventDefault();}
             else {evt.returnValue = false}
-
-            console.log('decrease value');
-
             $scope.decreaseParameter();
-//            $rootScope.debug = !$rootScope.debug;
             $scope.$apply();
 
         });
@@ -1205,6 +1201,51 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         	return currentAnnotation.steps[$scope.step]
         }
 
+        $scope.getAllFeatures = function(){
+
+            var currentAnnotation = $scope.getCurrentAnnotation();
+
+            var all_features = [];
+
+
+            for(var step in currentAnnotation.steps){
+
+                console.log(currentAnnotation.steps[step].features)
+
+                for(var i =0; i < currentAnnotation.steps[step].features.length; i++){
+
+
+                    all_features.push(currentAnnotation.steps[step].features[i]);
+
+                }
+
+//                all_features.concat()
+
+            }
+//
+//            for(var i=0;i < currentAnnotation.steps.length; i++){
+//
+//                console.log('inside');
+//
+//                if(i == 0){
+//                    all_annotations = currentAnnotation.steps[i];
+//                }
+//                else {
+//
+//                }
+//
+//                console.log('a', all_annotations)
+//
+//            }
+//
+            console.log('b', all_features)
+//
+//        	console.log('current annotation', currentAnnotation, all_annotations);
+
+        	return all_features;
+
+
+        }
 
 
         // controls
@@ -1309,21 +1350,51 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
             // clear viewer current and temporary annotations
             $scope.clearStep();
 
-            // load previous annotations if there are any
-            var stepAnnotation = $scope.getStepAnnotations();
+            if($scope.step_config && $scope.step_config.type == 'end'){
 
-            if (stepAnnotation) {
 
-                $rootScope.imageviewer.setAnnotations(stepAnnotation.features);
-                $scope.select_stack = stepAnnotation.selection;
+
+                var allFeatures = $scope.getAllFeatures();
+
+                if (allFeatures) {
+
+                    $rootScope.imageviewer.setAnnotations(allFeatures);
+
+                }
+                else {
+
+                    // this step doesn't have annotations, do appropriate step selection processing steps (aka auto)
+
+                }
+
 
             }
             else {
 
-                // this step doesn't have annotations, do appropriate step selection processing steps (aka auto)
+                console.log('not end')
+
+
+                var stepAnnotation = $scope.getStepAnnotations();
+
+                if (stepAnnotation) {
+
+                    $rootScope.imageviewer.setAnnotations(stepAnnotation.features);
+                    $scope.select_stack = stepAnnotation.selection;
+
+                }
+                else {
+
+                    // this step doesn't have annotations, do appropriate step selection processing steps (aka auto)
+
+                }
+
 
             }
 
+
+
+
+            // load previous annotations if there are any
             $rootScope.imageviewer.hidePaintLayerIfVisible();
 
 
@@ -1523,7 +1594,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
             }
             else if (step == $scope.totalSteps) {
 
-            	console.log($scope.getCurrentAnnotation());
+                $scope.clearStep();
 
                 // get a copy of the annotation
                 var annotation = $scope.getCurrentAnnotation();
@@ -1621,7 +1692,6 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
             $rootScope.imageviewer.moveToFeature(feature);
 
         	$rootScope.imageviewer.startPainting();
-
 
             $scope.runningSegmentation = false;
         }
@@ -1843,6 +1913,8 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 			}
             else if (option_to_select.type == 'gotostep'){
 
+                $scope.select_stack.push(select_single);
+
                 console.log(option_to_select.value);
                 $scope.gotoStep(option_to_select.value);
 
@@ -1921,31 +1993,22 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
             if ($rootScope.applicationReady)
             {
-
             	var current_annotation = this.getCurrentAnnotation();
 
                 if(current_annotation){
-
                     if (current_annotation.steps.hasOwnProperty(key)){
-
                         delete $scope.annotations[$scope.image_index].steps[key];
-
-
-
                     }
-
                 }
 
+                $scope.clearStackAnnotations();
                 $scope.clearLayerAnnotations();
-
             }
 
             return false;
-
         }
 
-        // state functions 
-
+        // state functions
         $scope.showIfStep = function(step){
 
 //            if(step == 5){
