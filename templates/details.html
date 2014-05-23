@@ -157,6 +157,19 @@
 
 {% raw %}
 
+
+    <script type="text/ng-template" id="field_renderer.html">
+
+        <a href="#" ng-click="selectDetail(opt)">
+            <img class="optionimage" src="/{{ opt.icon }}"/>
+            {{opt.title}}
+        </a>
+
+        <ul>
+            <li ng-repeat="opt in opt.options" ng-include="'field_renderer.html'"></li>
+        </ul>
+    </script>
+
     <div id="angular_id" ng-controller="ApplicationController">
 
         <div class="container-fluid">
@@ -168,69 +181,9 @@
                 <p><a href="static/rev3/decisiontree.json">JSON definition</a></p>
 
                 <ul>
-                    <li ng-repeat="(base_key, value) in step_options">
-                    <a href="#">
-                        <img class="optionimage" src="static/rev3/4/{{base_key+1}}.jpg"/>
-                        {{value.title}} - static/rev3/4/{{base_key+1}}.jpg
-                    </a>
-
-                    <ul ng-show="value.options">
-                        <li ng-repeat="(sub_key, sub_value) in value.options">
-                            <a href="#">
-                                <img class="optionimage"
-                                     src="static/rev3/4/{{base_key+1}}/{{sub_key+1}}.jpg"/>
-                                {{sub_value.title}} - static/rev3/4/{{base_key+1}}/{{sub_key+1}}.jpg
-                            </a>
-
-
-                            <ul ng-show="sub_value.options">
-                                <li ng-repeat="(sub_sub_key, sub_sub_value) in sub_value.options">
-                                    <a href="#">
-                                        <img class="optionimage"
-                                             src="static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}.jpg"/>
-                                        {{sub_sub_value.title}} - static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}.jpg
-                                    </a>
-
-                                    <ul ng-show="sub_sub_value.options">
-                                        <li ng-repeat="(sub_sub_sub_key, sub_sub_sub_value) in sub_sub_value.options">
-                                            <a href="#">
-                                                <img class="optionimage"
-                                                     src="static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}/{{sub_sub_sub_key+1}}.jpg"/>
-                                                {{sub_sub_sub_value.title}} - static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}/{{sub_sub_sub_key+1}}.jpg
-                                            </a>
-
-                                            <ul ng-show="sub_sub_sub_value.options">
-
-                                                <li ng-repeat="(s_sub_sub_sub_key, s_sub_sub_sub_value) in sub_sub_sub_value.options">
-                                                    <a href="#">
-                                                        <img class="optionimage"
-                                                             src="static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}/{{sub_sub_sub_key+1}}/{{s_sub_sub_sub_key+1}}.jpg"/>
-                                                        {{s_sub_sub_sub_value.title}} - static/rev3/4/{{base_key+1}}/{{sub_key+1}}/{{sub_sub_key+1}}/{{sub_sub_sub_key+1}}/{{s_sub_sub_sub_key+1}}.jpg
-                                                    </a>
-                                                </li>
-
-                                            </ul>
-
-                                            <br><br>
-
-                                        </li>
-                                    </ul>
-
-                                    <br><br>
-
-
-                                </li>
-                            </ul>
-
-                            <br><br>
-                        </li>
-                    </ul>
-
-                        <br><br>
-                    </li>
+                    <li ng-repeat="opt in step_options" ng-include="'field_renderer.html'"></li>
+                    <br>
                 </ul>
-
-                <br><br>
 
             </div>
         </div>
@@ -246,3 +199,5 @@
 
 {% block postjs %}
 {% endblock %}
+
+

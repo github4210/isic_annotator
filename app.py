@@ -1067,15 +1067,10 @@ def details():
 
 
 
+
 @app.route('/')
 def index():
-
-    # result = add.delay(4, 4)
-
-    # if g.user is not None:
-    #     print g.user
-
-    return render_template('index-rev4.html')
+    return render_template('index.html')
 
 
 @app.route('/login')
@@ -1089,7 +1084,11 @@ def loginAsGuest():
 
     g.user = user_collection.find_one({'id': '007'})
 
-    session['id'] = str(g.user['id'])
+    if g.user:
+        session['id'] = str(g.user['id'])
+        flash('You were signed in')
+    else:
+        print('could not find guest user')
 
     return redirect(request.referrer or url_for('index'))
 
@@ -1147,7 +1146,6 @@ def authorized(resp):
     # 2) access_token
 
     # need to resolve the rest of the google account info and update user in database
-
     real_access_token = access_token[0]
     from urllib2 import Request, urlopen, URLError
     headers = {'Authorization': 'OAuth '+access_token}
@@ -1170,39 +1168,160 @@ def authorized(resp):
 
     user_data['last_oauth'] = resp['access_token']
     user_data['last_secret'] = resp['id_token']
-
-    # print user_data
-    #
     user = user_collection.find_one({'email': user_data['email']})
-
-    # user = User.query.filter_by(user_email=user_data['email']).first()
 
     # if it's their first time, add them to the database
     if user is None:
 
-        print 'no user found in mongo'
+        db_id = user_collection.insert(user_data) #smart me would just use the id
+        user = user_collection.find_one({'email': user_data['email']})
+        session['id'] = str(user['id'])
 
-        user = user_collection.insert(user_data)
-        # user = User(user_data['email'])
-        # db_session.add(user)
+    else:
 
-        # print user
-    #
-    # now set their most recent auth values
-    # user.oauth_token = resp['access_token']
-    # user.oauth_secret = resp['id_token']
+        session['id'] = str(user['id'])
+        flash('You were signed in')
 
-    # db_session.commit()
-
-    # finally set, their user id as a session variable (this is the primary key in the users DB)
-    # it is used to resolve the user prior to each request (wow this app is DB read heavy)
-    session['id'] = str(user['id'])
-
-    # print 'saving session id as %s' % session['id']
-
-    flash('You were signed in')
 
     return redirect(next_url)
+
+
+# @app.route('/')
+# def index():
+#
+#     # result = add.delay(4, 4)
+#
+#     # if g.user is not None:
+#     #     print g.user
+#
+#     return render_template('index-rev4.html')
+#
+#
+# @app.route('/login')
+# def login():
+#     callback=url_for('authorized', _external=True)
+#     return google.authorize(callback=callback)
+#
+#
+# @app.route('/guest')
+# def loginAsGuest():
+#
+#     g.user = user_collection.find_one({'id': '007'})
+#
+#     session['id'] = str(g.user['id'])
+#
+#     return redirect(request.referrer or url_for('index'))
+#
+#
+# @app.route('/logout')
+# def logout():
+#     session.pop('id', None)
+#     session.pop('access_token', None)
+#     flash('You were signed out')
+#     return redirect(request.referrer or url_for('index'))
+#
+#
+# @google.tokengetter
+# def get_access_token():
+#     """This is used by the API to look for the auth token and secret
+#     it should use for API calls.  During the authorization handshake
+#     a temporary set of token and secret is used, but afterwards this
+#     function has to return the token and secret.  If you don't want
+#     to store this in the database, consider putting it into the
+#     session instead.
+#     """
+#
+#     #user = g.user
+#     #if user is None:
+#     #    print 'We don\'t have a current user in the session...'
+#     #    return
+#         #return user.oauth_token, user.oauth_secret
+#     return session.get('access_token')
+#
+#
+# @app.route(REDIRECT_URI)
+# @google.authorized_handler
+# def authorized(resp):
+#
+#     # get the next url to go to if login is a success (either passed via query string, or default to index)
+#     next_url = request.args.get('next') or url_for('index')
+#
+#     if resp is None:
+#         print 'denied request'
+#         flash(u'You denied the request to sign in.')
+#         return redirect(next_url)
+#
+#     access_token = resp['access_token']
+#
+#     if access_token is None:
+#         print 'access token missing'
+#         flash(u'Access token is missing.')
+#         return redirect(next_url)
+#
+#     # we have an access token, set it for the session
+#     session['access_token'] = access_token, ''
+#
+#     # values in the google oauth response
+#     # 1) id_token
+#     # 2) access_token
+#
+#     # need to resolve the rest of the google account info and update user in database
+#
+#     real_access_token = access_token[0]
+#     from urllib2 import Request, urlopen, URLError
+#     headers = {'Authorization': 'OAuth '+access_token}
+#     req = Request('https://www.googleapis.com/oauth2/v1/userinfo',
+#                   None, headers)
+#     try:
+#         res = urlopen(req)
+#     except URLError, e:
+#         if e.code == 401:
+#             # Unauthorized - bad token
+#             session.pop('access_token', None)
+#             return redirect(url_for('index'))
+#
+#     # returns a json response with
+#     # 1) verified_email (boolean)
+#     # 2) id
+#     # 3) email
+#     import json
+#     user_data = json.loads(res.read())
+#
+#     user_data['last_oauth'] = resp['access_token']
+#     user_data['last_secret'] = resp['id_token']
+#
+#     # print user_data
+#     #
+#     user = user_collection.find_one({'email': user_data['email']})
+#
+#     # user = User.query.filter_by(user_email=user_data['email']).first()
+#
+#     # if it's their first time, add them to the database
+#     if user is None:
+#
+#         print 'no user found in mongo'
+#
+#         user = user_collection.insert(user_data)
+#         # user = User(user_data['email'])
+#         # db_session.add(user)
+#
+#         # print user
+#     #
+#     # now set their most recent auth values
+#     # user.oauth_token = resp['access_token']
+#     # user.oauth_secret = resp['id_token']
+#
+#     # db_session.commit()
+#
+#     # finally set, their user id as a session variable (this is the primary key in the users DB)
+#     # it is used to resolve the user prior to each request (wow this app is DB read heavy)
+#     session['id'] = str(user['id'])
+#
+#     # print 'saving session id as %s' % session['id']
+#
+#     flash('You were signed in')
+#
+#     return redirect(next_url)
 
 
 
