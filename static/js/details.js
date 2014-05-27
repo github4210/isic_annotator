@@ -31,7 +31,6 @@ var appController = review_app.controller('ApplicationController', ['$scope', '$
         };
 
 
-
     }]);
 
 

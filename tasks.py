@@ -1,5 +1,7 @@
 from celery import Celery
 
+import sys
+
 import cv2
 import urllib
 import numpy as np
