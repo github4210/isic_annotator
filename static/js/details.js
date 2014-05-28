@@ -12,13 +12,15 @@ var appController = review_app.controller('ApplicationController', ['$scope', '$
 
         $("#angular_id").height(window.innerHeight - 80);
 
-        $scope.configurl = 'static/rev3/decisiontree.json';
+        $scope.configurl = 'static/derm/decisiontree.json';
 
+
+        $scope.step_options = [];
 
         $http.get($scope.configurl).then(function (response) {
             console.log(response)
 
-            $scope.step_options = response.data[4].options
+            $scope.step_options = response.data
         });
 
         $scope.safeApply = function( fn ) {

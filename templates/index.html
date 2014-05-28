@@ -9,9 +9,10 @@
 <script src="static/bower_components/angular-xml/angular-xml.min.js"></script>
 <script src="static/bower_components/mousetrap/mousetrap.min.js"></script>
 
-<script src="http://ol3js.org/en/master/build/ol.js" type="text/javascript"></script>
+{#<script src="http://ol3js.org/en/master/build/ol.js" type="text/javascript"></script>#}
 
-{#<script type="text/javascript" src="static/js/ol-whitespace.js"></script>#}
+{#<script type="text/javascript" src="static/js/ol.js"></script>#}
+    <script type="text/javascript" src="static/js/ol-whitespace.js"></script>
 
 <script type="text/javascript" src="static/js/pf-segmentation.js"></script>
 <script type="text/javascript" src="static/js/slic-segmentation.js"></script>
@@ -149,6 +150,7 @@
             {% raw %}
 
 
+
             <script type="text/ng-template" id="myModalContent.html" class="modalbase">
                 <div class="modal-body">
 
@@ -161,6 +163,18 @@
 
                     </div>
                 </div>
+            </script>
+
+            <script type="text/ng-template" id="field_renderer.html">
+
+                <a href="#" ng-click="selectDropDownOption(opt)">
+                    <img class="optionimage" ng-src="/{{ opt.icon }}"/>
+                </a>
+
+                <ul>
+                    <li ng-show="opt.type!='choice'" ng-repeat="opt in opt.options" ng-include="'field_renderer.html'"></li>
+                </ul>
+
             </script>
 
 
@@ -194,7 +208,11 @@
                         <div class="imagePreview">
 
                             <div class='wrapper' ng-repeat="(key, value) in image_list">
-                                <img class="imagethumb" ng-click='selectImage(key)' src="{{value.thumbnail}}"/>
+                                <img
+                                     class="imagethumb"
+                                     ng-click='selectImage(key)'
+                                     ng-src="{{value.thumbnail}}"/>
+
                                 <!--<div class='description' ng-show="imageHasAnnotations(key)">
                                     <p class='description_content'><i class="fa fa-check"></i></p>
                                 </div>-->
@@ -202,7 +220,8 @@
 
                         </div>
                         <div class="btn-group">
-                                <div class="btn btn-inverse">Selected: {{ current_image.study_id }}</div>
+                                <div class="btn btn-inverse">Selected: {{ current_image.study_id
+                                    }}</div>
                         </div>
                     </div>
 
@@ -223,8 +242,87 @@
                             <i class="fa fa-chevron-down"></i></div>
 
                         <div class="btn" disabled>Tolerance: <b>{{magicwand_tolerance}}</b></div>
+                    </div>
+
+
+                    <div class="btn-group"
+                         ng-show="compareState('pldefine', tool_bar_state)">
+
+                        <div class="btn" disabled>
+                            Place 3 or more points to create a perimeter
+                        </div>
 
                     </div>
+
+                    <div class="btn-group"
+                         ng-show="compareState('rppaint', tool_bar_state)">
+
+                        <div class="btn"
+                             ng-show="drawModeIs('paintbrush')"
+                             ng-click="navMode()">
+                            Hide contours
+                        </div>
+                        <div class="btn"
+                             ng-show="drawModeIs('navigate')"
+                             ng-click="drawMode()">
+                            Show contours
+                        </div>
+
+                        <div class="btn btn-inverse" disabled>
+                            {{select_detail.title}}
+                        </div>
+
+                        <div class="btncontainer">
+                            <img class="btnimage" src="{{select_detail.url}}"/>
+                        </div>
+                    </div>
+
+                    <div class="btn-group"
+                         ng-show="compareState('rpreview', tool_bar_state)">
+
+                        <div class="btn"
+                             ng-click="runRegionPaint()"
+                             ng-show="select_detail">
+                            Edit labels
+                        </div>
+                    </div>
+
+                    <div class="btn-group pull-right"
+                         ng-show="compareState('rppaint', tool_bar_state)">
+
+                        <div class="btn btn-inverse"
+                             ng-click="finishRegionPaint()">
+                            Fill contours
+                        </div>
+                    </div>
+
+
+                    <div class="btn-group pull-right"
+                         ng-show="compareState('selectpbn', tool_bar_state)">
+
+
+                        <div class="btn btn-inverse" ng-show="runningSegmentation">
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </div>
+
+                        <div class="btn btn-inverse"
+                                ng-click="runRegionPaint()">
+                                Click to begin
+                        </div>
+
+                    </div>
+
+                    <div class="btn-group"
+                         ng-show="stepHasDropDownOptions()">
+                        <nav>
+                            <ul>
+                                <li ng-repeat="opt in step_options" ng-include="'field_renderer.html'"></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+
 
                 </div>
             </div>
@@ -233,7 +331,7 @@
 
             <!-- Step footer -->
 
-            <div class="lowertoolbar">
+            <div class="lowertoolbar" ng-show="canGoToNextStep()" >
 
                 <div class="btn-group">
                     <div class="btn btn-inverse">
@@ -257,22 +355,8 @@
 
 
                     </div>
-
-
                 </div>
-
-
-
-
-                <!--<button-->
-                        <!--ng-click="nextStep()"-->
-                        <!--class="btn btn-success">-->
-                    <!--Next-->
-                <!--</button>-->
-
             </div>
-
-
         </div>
     </div>
 

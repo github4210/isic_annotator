@@ -79,58 +79,58 @@ function rgbToHex(r, g, b) {
 var _labels = [
     { name: 'background', color: [255, 255, 255]},
     { name: 'foreground', color: [255, 255, 255]},
-    { name: '10', color: [251, 0, 13], icon: "static/rev3/4/1.jpg", title: 'Lines' },
-    { name: '20', color: [251, 1, 13], icon: "static/rev3/4/1/1.jpg", title: 'Lines: Reticular' },
-    { name: '21', color: [251, 2, 13], icon: "static/rev3/4/1/1/1.jpg", title: 'Lines: Reticular: Regular' },
-    { name: '22', color: [251, 3, 13], icon: "static/rev3/4/1/1/2.jpg", title: 'Lines: Reticular: Thick' },
-    { name: '23', color: [251, 4, 13], icon: "static/rev3/4/1/1/3.jpg", title: 'Lines: Reticular: Thin' },
-    { name: '24', color: [251, 5, 13], icon: "static/rev3/4/1/1/4.jpg", title: 'Lines: Reticular: Atypical' },
-    { name: '25', color: [251, 6, 13], icon: "static/rev3/4/1/1/5.jpg", title: 'Lines: Reticular: Negative Network' },
-    { name: '30', color: [251, 7, 13], icon: "static/rev3/4/1/2.jpg", title: 'Lines: Radial' },
-    { name: '31', color: [251, 8, 13], icon: "static/rev3/4/1/2/1.jpg", title: 'Lines: Radial: Radial lines connected to a common base' },
-    { name: '32', color: [251, 9, 13], icon: "static/rev3/4/1/2/2.jpg", title: 'Lines: Radial: Radial lines converging to a central dot' },
-    { name: '33', color: [251, 10, 13], icon: "static/rev3/4/1/2/3.jpg", title: 'Lines: Radial: Radial lines, peripheral' },
-    { name: '40', color: [251, 11, 13], icon: "static/rev3/4/1/3.jpg", title: 'Lines: Branched' },
-    { name: '50', color: [251, 12, 13], icon: "static/rev3/4/1/4.jpg", title: 'Lines: Parallel and straight' },
-    { name: '51', color: [251, 13, 13], icon: "static/rev3/4/1/4/1.jpg", title: 'Lines: Parallel and straight: Furrows' },
-    { name: '52', color: [251, 14, 13], icon: "static/rev3/4/1/4/2.jpg", title: 'Lines: Parallel and straight: Ridges' },
-    { name: '53', color: [251, 15, 13], icon: "static/rev3/4/1/4/3.jpg", title: 'Lines: Parallel and straight: Fibrallar' },
-    { name: '60', color: [251, 16, 13], icon: "static/rev3/4/1/5.jpg", title: 'Lines: Curved' },
-    { name: '61', color: [251, 17, 13], icon: "static/rev3/4/1/5/1.jpg", title: 'Lines: Curved: Thick' },
-    { name: '62', color: [251, 18, 13], icon: "static/rev3/4/1/5/2.jpg", title: 'Lines: Curved: Thin' },
-    { name: '41', color: [251, 19, 13], icon: "static/rev3/4/1/6.jpg", title: 'Lines: Zig Zag' },
-    { name: '70', color: [236, 252, 0], icon: "static/rev3/4/2.jpg", title: 'Dots & Clods' },
-    { name: '71', color: [236, 252, 1], icon: "static/rev3/4/2/1.jpg", title: 'Dots & Clods: Dots' },
-    { name: '72', color: [236, 252, 2], icon: "static/rev3/4/2/1/1.jpg", title: 'Dots & Clods: Dots: Atypical Dots' },
-    { name: '73', color: [236, 252, 3], icon: "static/rev3/4/2/1/2.jpg", title: 'Dots & Clods: Dots: Dots, Four square' },
-    { name: '74', color: [236, 252, 4], icon: "static/rev3/4/2/1/3.jpg", title: 'Dots & Clods: Dots: Dots, Circle' },
-    { name: '75', color: [236, 252, 5], icon: "static/rev3/4/2/1/4.jpg", title: 'Dots & Clods: Dots: Dots, Lines' },
-    { name: '76', color: [236, 252, 6], icon: "static/rev3/4/2/2.jpg", title: 'Dots & Clods: Clods' },
-    { name: '77', color: [236, 252, 7], icon: "static/rev3/4/2/2/1.jpg", title: 'Dots & Clods: Clods: Atypical Clods' },
-    { name: '80', color: [126, 0, 169], icon: "static/rev3/4/3.jpg", title: 'Structureless' },
-    { name: '81', color: [126, 1, 169], icon: "static/rev3/4/3/1.jpg", title: 'Structureless: Blue-White Veil' },
-    { name: '82', color: [126, 2, 169], icon: "static/rev3/4/3/2.jpg", title: 'Structureless: Pseudonetwork' },
-    { name: '83', color: [126, 3, 169], icon: "static/rev3/4/3/3.jpg", title: 'Structureless: Peripheral brown structureless area' },
-    { name: '84', color: [126, 4, 169], icon: "static/rev3/4/3/4.jpg", title: 'Structureless: Off-centered blotch' },
-    { name: '100', color: [20, 209, 0], icon: "static/rev3/4/4.jpg", title: 'Vessels' },
-    { name: '110', color: [20, 209, 1], icon: "static/rev3/4/4/1.jpg", title: 'Vessels: Lines' },
-    { name: '111', color: [20, 209, 2], icon: "static/rev3/4/4/1/1.jpg", title: 'Vessels: Lines: Straight' },
-    { name: '112', color: [20, 209, 3], icon: "static/rev3/4/4/1/2.jpg", title: 'Vessels: Lines: Looped' },
-    { name: '113', color: [20, 209, 4], icon: "static/rev3/4/4/1/2/1.jpg", title: 'Vessels: Lines: Looped: Looped with white Halo' },
-    { name: '114', color: [20, 209, 5], icon: "static/rev3/4/4/1/3.jpg", title: 'Vessels: Lines: Curved' },
-    { name: '115', color: [20, 209, 6], icon: "static/rev3/4/4/1/4.jpg", title: 'Vessels: Lines: Serpentine' },
-    { name: '116', color: [20, 209, 7], icon: "static/rev3/4/4/1/5.jpg", title: 'Vessels: Lines: Helical' },
-    { name: '117', color: [20, 209, 8], icon: "static/rev3/4/4/1/6.jpg", title: 'Vessels: Lines: Coiled' },
-    { name: '118', color: [20, 209, 9], icon: "static/rev3/4/4/1/7.jpg", title: 'Vessels: Lines: Branched' },
-    { name: '101', color: [20, 209, 10], icon: "static/rev3/4/4/2.jpg", title: 'Vessels: Dots' },
-    { name: '102', color: [20, 209, 11], icon: "static/rev3/4/4/3.jpg", title: 'Vessels: Clods' },
-    { name: '120', color: [20, 209, 12], icon: "static/rev3/4/4/4.jpg", title: 'Vessels: Milky-red area' },
-    { name: '130', color: [20, 209, 13], icon: "static/rev3/4/4/5.jpg", title: 'Vessels: Polymorphous vessels' },
-    { name: '140', color: [0, 140, 255], icon: "static/rev3/4/5.jpg", title: 'Other' },
-    { name: '150', color: [1, 140, 255], icon: "static/rev3/4/5/1.jpg", title: 'Other: Shiny white lines' },
-    { name: '151', color: [2, 140, 255], icon: "static/rev3/4/5/2.jpg", title: 'Other: Circles' },
-    { name: '152', color: [3, 140, 255], icon: "static/rev3/4/5/3.jpg", title: 'Other: Pseudopods' },
-    { name: '153', color: [4, 140, 255], icon: "static/rev3/4/5/4.jpg", title: 'Other: Sharply demarcated scalloped border' }
+    { name : '10', color: [251, 17, 13], icon: "static/derm/images/5-lines.jpg", title: 'Lines' },
+    { name : '20', color: [251, 18, 13], icon: "static/derm/images/5-lines_reticular.jpg", title: 'Reticular' },
+    { name : '21', color: [251, 19, 13], icon: "static/derm/images/5-lines_reticular_regular.jpg", title: 'Regular' },
+    { name : '22', color: [251, 20, 13], icon: "static/derm/images/5-lines_reticular_thick.jpg", title: 'Thick' },
+    { name : '23', color: [251, 21, 13], icon: "static/derm/images/5-lines_reticular_thin.jpg", title: 'Thin' },
+    { name : '24', color: [251, 22, 13], icon: "static/derm/images/5-lines_reticular_atypical.jpg", title: 'Atypical' },
+    { name : '25', color: [251, 23, 13], icon: "static/derm/images/5-lines_reticular_negativenetwork.jpg", title: 'Negative Network' },
+    { name : '30', color: [251, 24, 13], icon: "static/derm/images/5-lines_radial.jpg", title: 'Radial' },
+    { name : '31', color: [251, 25, 13], icon: "static/derm/images/5-lines_radial_radiallinesconnectedtoacommonbase.jpg", title: 'Radial lines connected to a common base' },
+    { name : '32', color: [251, 26, 13], icon: "static/derm/images/5-lines_radial_radiallinesconvergingtoacentraldot.jpg", title: 'Radial lines converging to a central dot' },
+    { name : '33', color: [251, 27, 13], icon: "static/derm/images/5-lines_radial_radiallines-peripheral.jpg", title: 'Radial lines, peripheral' },
+    { name : '40', color: [251, 28, 13], icon: "static/derm/images/5-lines_branched.jpg", title: 'Branched' },
+    { name : '50', color: [251, 29, 13], icon: "static/derm/images/5-lines_parallelandstraight.jpg", title: 'Parallel and straight' },
+    { name : '51', color: [251, 30, 13], icon: "static/derm/images/5-lines_parallelandstraight_furrows.jpg", title: 'Furrows' },
+    { name : '52', color: [251, 31, 13], icon: "static/derm/images/5-lines_parallelandstraight_ridges.jpg", title: 'Ridges' },
+    { name : '53', color: [251, 32, 13], icon: "static/derm/images/5-lines_parallelandstraight_fibrallar.jpg", title: 'Fibrallar' },
+    { name : '60', color: [251, 33, 13], icon: "static/derm/images/5-lines_curved.jpg", title: 'Curved' },
+    { name : '61', color: [251, 34, 13], icon: "static/derm/images/5-lines_curved_thick.jpg", title: 'Thick' },
+    { name : '62', color: [251, 35, 13], icon: "static/derm/images/5-lines_curved_thin.jpg", title: 'Thin' },
+    { name : '41', color: [251, 36, 13], icon: "static/derm/images/5-lines_zigzag.jpg", title: 'Zig Zag' },
+    { name : '70', color: [236, 252, 37], icon: "static/derm/images/5-dots-clods.jpg", title: 'Dots & Clods' },
+    { name : '71', color: [236, 252, 38], icon: "static/derm/images/5-dots-clods_dots.jpg", title: 'Dots' },
+    { name : '72', color: [236, 252, 39], icon: "static/derm/images/5-dots-clods_dots_atypicaldots.jpg", title: 'Atypical Dots' },
+    { name : '73', color: [236, 252, 40], icon: "static/derm/images/5-dots-clods_dots_dots-foursquare.jpg", title: 'Dots, Four square' },
+    { name : '74', color: [236, 252, 41], icon: "static/derm/images/5-dots-clods_dots_dots-circle.jpg", title: 'Dots, Circle' },
+    { name : '75', color: [236, 252, 42], icon: "static/derm/images/5-dots-clods_dots_dots-lines.jpg", title: 'Dots, Lines' },
+    { name : '76', color: [236, 252, 43], icon: "static/derm/images/5-dots-clods_clods.jpg", title: 'Clods' },
+    { name : '77', color: [236, 252, 44], icon: "static/derm/images/5-dots-clods_clods_atypicalclods.jpg", title: 'Atypical Clods' },
+    { name : '80', color: [126, 45, 169], icon: "static/derm/images/5-structureless.jpg", title: 'Structureless' },
+    { name : '81', color: [126, 46, 169], icon: "static/derm/images/5-structureless_blue-whiteveil.jpg", title: 'Blue-White Veil' },
+    { name : '82', color: [126, 47, 169], icon: "static/derm/images/5-structureless_pseudonetwork.jpg", title: 'Pseudonetwork' },
+    { name : '83', color: [126, 48, 169], icon: "static/derm/images/5-structureless_peripheralbrownstructurelessarea.jpg", title: 'Peripheral brown structureless area' },
+    { name : '84', color: [126, 49, 169], icon: "static/derm/images/5-structureless_off-centeredblotch.jpg", title: 'Off-centered blotch' },
+    { name : '100', color: [20, 209, 50], icon: "static/derm/images/5-vessels.jpg", title: 'Vessels' },
+    { name : '110', color: [20, 209, 51], icon: "static/derm/images/5-vessels_lines.jpg", title: 'Lines' },
+    { name : '111', color: [20, 209, 52], icon: "static/derm/images/5-vessels_lines_straight.jpg", title: 'Straight' },
+    { name : '112', color: [20, 209, 53], icon: "static/derm/images/5-vessels_lines_looped.jpg", title: 'Looped' },
+    { name : '113', color: [20, 209, 54], icon: "static/derm/images/5-vessels_lines_looped_loopedwithwhitehalo.jpg", title: 'Looped with white Halo' },
+    { name : '114', color: [20, 209, 55], icon: "static/derm/images/5-vessels_lines_curved.jpg", title: 'Curved' },
+    { name : '115', color: [20, 209, 56], icon: "static/derm/images/5-vessels_lines_serpentine.jpg", title: 'Serpentine' },
+    { name : '116', color: [20, 209, 57], icon: "static/derm/images/5-vessels_lines_helical.jpg", title: 'Helical' },
+    { name : '117', color: [20, 209, 58], icon: "static/derm/images/5-vessels_lines_coiled.jpg", title: 'Coiled' },
+    { name : '118', color: [20, 209, 59], icon: "static/derm/images/5-vessels_lines_branched.jpg", title: 'Branched' },
+    { name : '101', color: [20, 209, 60], icon: "static/derm/images/5-vessels_dots.jpg", title: 'Dots' },
+    { name : '102', color: [20, 209, 61], icon: "static/derm/images/5-vessels_clods.jpg", title: 'Clods' },
+    { name : '120', color: [20, 209, 62], icon: "static/derm/images/5-vessels_milky-redarea.jpg", title: 'Milky-red area' },
+    { name : '130', color: [20, 209, 63], icon: "static/derm/images/5-vessels_polymorphousvessels.jpg", title: 'Polymorphous vessels' },
+    { name : '140', color: [64, 140, 255], icon: "static/derm/images/5-other.jpg", title: 'Other' },
+    { name : '150', color: [65, 140, 255], icon: "static/derm/images/5-other_shinywhitelines.jpg", title: 'Shiny white lines' },
+    { name : '151', color: [66, 140, 255], icon: "static/derm/images/5-other_circles.jpg", title: 'Circles' },
+    { name : '152', color: [67, 140, 255], icon: "static/derm/images/5-other_pseudopods.jpg", title: 'Pseudopods' },
+    { name : '153', color: [68, 140, 255], icon: "static/derm/images/5-other_sharplydemarcatedscallopedborder.jpg", title: 'Sharply demarcated scalloped border' }
 ];
 
 
@@ -251,6 +251,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                 if (self.draw_mode == 'navigate') {
 
                     self.last_click_location = click_coords;
+
                     featuresAtPoint(pixel);
 
                 } else if (self.draw_mode == 'pointlist') {
@@ -262,6 +263,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                 } else if (self.draw_mode == 'autofill') {
 
                     self.last_click_location = click_coords;
+
                    	self.autofill(click_coords)
 
                 } else if (self.draw_mode == 'lines') {
@@ -305,6 +307,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
             featuresAtPoint: function(pixel){
 
 //                console.log(pixel);
+
                   var feature = this.map.forEachFeatureAtPixel(pixel, function(feature, layer) {
                     return feature;
                   });
@@ -316,12 +319,15 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                       if(icon){
                         info.src = icon;
+                        info.style.display = 'inline';
                       }
                       else {
                         info.src = 'static/na.jpg'
+                        info.style.display = 'none';
                       }
                   }
                   else {
+                      info.style.display = 'none';
                       info.src = 'static/na.jpg'
                   }
             },
@@ -644,12 +650,14 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                     for(var i=0;i<response.result.features.length;i++){
 
-                        var jsObject = JSON.parse(response.result.features[i])
-
+//                        var jsObject = JSON.parse(response.result.features[i])
+                        var jsObject = response.result.features[i]
                         var featobj = f.readFeature(jsObject);
 
                         featobj.set('title', 'lesion boundary')
 //                        featobj['properties']['name'] = 'lesion boundary'
+
+                        console.log(featobj);
 
                         self.vector_source.addFeature(featobj)
 
@@ -755,7 +763,6 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                         url: zoomify_url + '/',
                         size: [metadata.max_size.w, metadata.max_size.h],
                         crossOrigin: crossOrigin,
-
                     });
 
                     self.image_layer = new ol.layer.Tile({
@@ -881,6 +888,16 @@ var appController = derm_app.controller('ApplicationController', ['$scope', '$ro
             }
         })
 
+        $scope.safeApply = function( fn ) {
+            var phase = this.$root.$$phase;
+            if(phase == '$apply' || phase == '$digest') {
+                if(fn) { fn(); }
+            } else {
+                this.$apply(fn);
+            }
+        };
+
+
 //        // effectively a callback from the initial subject query
 //        $rootScope.$watch('image_list', function(newValue, originalValue) {
 //            if($rootScope.applicationReady){
@@ -911,6 +928,65 @@ var appController = derm_app.controller('ApplicationController', ['$scope', '$ro
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScope', '$timeout', '$sanitize', '$http', '$modal', '$log', 'decisionTree', 'imageList',
     function ($scope, $rootScope, $timeout, $sanitize, $http, $modal, $log, decisionTree, imageList ) {
 
@@ -922,7 +998,9 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.totalSteps = 0; // total number of steps
 
         $scope.step_config = undefined; // current step configuration
+
         $scope.tool_bar_state = undefined; // current toolbar configuration (nested under step)
+
         $scope.step_options = undefined; // list of options to select (if step has any)
 
 
@@ -954,13 +1032,9 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.magicwand_tolerance = 50;
         $scope.regionpaint_size = 70;
         $scope.runningSegmentation = false;
+        $scope.select_detail = undefined;
 
 
-
-        // local scope from nested vars
-
-        $scope.select_stack = [];
-        $scope.select_last = undefined;
 
 
 
@@ -970,7 +1044,11 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
         $scope.loadDecisionTree = function(){
 
+//             console.log('Loading decisiontree');
+
              decisionTree.fromLocal().then(function(d){
+
+//                 console.log(d);
                 $scope.decision_tree = d;
              });
 
@@ -985,15 +1063,32 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         // effectively a callback from the initial subject query
         $scope.$watch('decision_tree', function(newValue, originalValue) {
 
-            if($rootScope.applicationReady){
+            if(newValue){
 
                 console.log("There are " + $scope.decision_tree.length + ' steps');
 
                 $scope.totalSteps = $scope.decision_tree.length;
 
-                imageList.fromDB($rootScope.user_email, 0, 10, true).then(function(d){
+                imageList.fromDB($rootScope.user_email, 0, 10, false).then(function(d){
 
                     $scope.image_list = d;
+
+                    $scope.annotations = [];
+
+                    $.each($scope.image_list, function(n, image_data){
+
+                         var placeholder_obj = {
+                             annotationid: -1,
+                             steps: {}
+                         };
+
+                         $scope.annotations.push(placeholder_obj);
+                     });
+
+
+                    console.log($scope.image_list);
+
+                    $scope.totalItems = $scope.image_list.length;
 
                     $scope.nextStep();
 
@@ -1018,10 +1113,14 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         }
 
         $scope.getCurrentAnnotation = function(){
+
         	if($rootScope.applicationReady){
+
         		if ($scope.annotations) {
+//                    console.log($scope.annotations[$scope.image_index]);
         			return $scope.annotations[$scope.image_index];
         		}
+
         	}
         	return undefined;
         }
@@ -1048,6 +1147,141 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 //                $rootScope.imageviewer.clearPaintByNumber();
 //            }
         }
+
+
+
+
+
+        $scope.stepHasDropDownOptions = function(){
+
+            // returns true if current toolbar state is select
+            if ($scope.tool_bar_state){
+                return $scope.tool_bar_state == 'select' || $scope.tool_bar_state == 'rppaint';
+//                return $scope.tool_bar_state.indexOf('select') > -1;
+            }
+            return false;
+
+        }
+
+
+        $scope.canGoToNextStep = function() {
+
+            // returns true if the current step contains the necessary information to go to the next step
+            if ($scope.step == 0){
+
+                // step 0 -> if we have an image
+                return $rootScope.active_image != undefined;
+
+            }
+            else if ($scope.step > 0){
+
+                // step 1=6 -> if we have annotations
+                return $scope.stepHasAnnotations($scope.step);
+
+            }
+
+
+
+
+            return true;
+        }
+
+
+
+        $scope.selectDropDownOption = function(option){
+
+
+            if (option.type == 'drop'){
+
+                console.log('this is not a valid selection');
+            }
+            else if (option.type == 'dropchoice') {
+
+                console.log('valid selection, creating annotation and opening modal');
+
+                if(option.options.length > 0){
+                    // contains additional questions in form of modal
+                    $scope.openModalWithOptions(option);
+
+                }
+
+            }
+            else if (option.type == 'dropoption') {
+
+                console.log('valid paint selection');
+
+                $scope.selectDetail(option);
+
+            }
+            else if (option.type == 'gotostep') {
+
+                console.log('valid selection, creating annotation and moving on to next step');
+
+                $scope.gotoStep(option.value);
+
+
+
+            }
+            else {
+
+                console.log('unhandled option type')
+                console.log(option);
+            }
+
+
+//
+//'features': [
+//          {
+//            'type': 'Feature',
+//            'geometry': {
+//              'type': 'Point',
+//              'coordinates': [0, 0]
+//            }
+//          },
+//            			var selected_url = 'static/derm/' + $scope.step_base + '/' + (key+1) + '.jpg'
+//
+//			console.log('selected url', selected_url)
+//
+//			var select_single = {
+//				url : selected_url,
+//				key : key
+//			}
+//
+//			if(option_to_select.type == 'select'){
+//
+//				$scope.select_stack.push(select_single);
+//				$scope.step_options = option_to_select.options;
+//				$scope.step_base = $scope.step_base + '/' + (key+1);
+//
+//			}
+//			else if (option_to_select.type == 'review') {
+//
+//
+//				$scope.select_stack.push(select_single);
+////				$rootScope.imageviewer.saveSelectionStack($scope.select_stack);
+//	        	$scope.tool_bar_state = option_to_select.type;
+//
+//                $scope.openModalWithOptions(option_to_select);
+//
+//			}
+//            else if (option_to_select.type == 'gotostep'){
+//
+//                $scope.select_stack.push(select_single);
+//
+//                console.log(option_to_select.value);
+//                $scope.gotoStep(option_to_select.value);
+//
+//            }
+
+
+        }
+
+
+
+
+
+
+
 
 
 
@@ -1138,17 +1372,29 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
 
 
+        $scope.setDrawMode = function(newDrawMode){
+
+            console.log('setting draw mode to ' + newDrawMode)
+
+            $scope.draw_mode = newDrawMode;
+            $rootScope.imageviewer.setDrawMode(newDrawMode);
+
+        }
+
+
+
         // setters
 
         $scope.saveCurrentStepAnnotation = function(){
 
             // just making things explicit for readability's sake
             var features = $rootScope.imageviewer.getFeatures();
-            var selection = angular.copy($scope.select_stack);
             var current_step = $scope.step;
         	var currentAnnotation = $scope.getCurrentAnnotation();
 
-            if (features.length || selection.length){
+            if (features.length){
+
+                console.log(currentAnnotation);
 
                 if(current_step in Object.keys(currentAnnotation.steps)){
 
@@ -1162,7 +1408,6 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
                     var singleAnnotation = {
                         features : features,
-                        selection : selection,
                         startTime : -1,
                         lastModifyTime : -1,
                         initialCreateTime : -1
@@ -1177,7 +1422,6 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
                     var singleAnnotation = {
                         features : features,
-                        selection : selection,
                         startTime : -1,
                         lastModifyTime : -1,
                         initialCreateTime : -1
@@ -1281,6 +1525,9 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.manualEdit = function(){
 
             $scope.tool_bar_state = 'pldefine';
+            $scope.setDrawMode('pointlist');
+
+
             $rootScope.imageviewer.setDrawMode('pointlist');
 
         }
@@ -1326,7 +1573,8 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
             // get current step configuration
             $scope.step_config = $scope.getCurrentStepConfig();
-            console.log($scope.step_config)
+
+            console.log($scope.step_config);
 
             // clear viewer current and temporary annotations
             $scope.clearStep();
@@ -1359,7 +1607,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 if (stepAnnotation) {
 
                     $rootScope.imageviewer.setAnnotations(stepAnnotation.features);
-                    $scope.select_stack = stepAnnotation.selection;
+//                    $scope.select_stack = stepAnnotation.selection;
 
                 }
                 else {
@@ -1384,11 +1632,11 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 // set imageviewer to current step configuration
                 if ($scope.step_config.default != "") {
 
-                    $rootScope.imageviewer.setDrawMode($scope.step_config.default);
+                    $scope.setDrawMode($scope.step_config.default);
 
                 }
                 else {
-                    $rootScope.imageviewer.setDrawMode('navigate');
+                    $scope.setDrawMode('navigate');
                 }
 
                 if($scope.step_config.zoom == "lesion"){
@@ -1422,8 +1670,6 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
             // if imageviewer annotations, clear them
             $scope.clearLayerAnnotations();
 
-            // if stack exists, clear it
-            $scope.clearStackAnnotations();
 
             // return to original step definition
             if($scope.step_config){
@@ -1436,7 +1682,9 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         // returns the first feature from the first lesion definition step
         $scope.getLesionFeature = function(){
             var currentAnnotation = $scope.getCurrentAnnotation();
-            return currentAnnotation.steps[0].features[0];
+
+            return currentAnnotation.steps[1].features[0];
+
         }
 
         // this will clear the
@@ -1450,19 +1698,19 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         }
 
         // This clears the selection stack for overall pattern
-        $scope.clearStackAnnotations = function(){
-
-            // clear the selection stack
-            $scope.select_stack = [];
-            $scope.select_last = undefined;
-
-            if($scope.step_config){
-
-                $scope.step_base = $scope.step_config.step;
-                $scope.step_options = $scope.step_config.options;
-
-            }
-        }
+//        $scope.clearStackAnnotations = function(){
+//
+//            clear the selection stack
+//            $scope.select_stack = [];
+//            $scope.select_last = undefined;
+//
+//            if($scope.step_config){
+//
+//                $scope.step_base = $scope.step_config.step;
+//                $scope.step_options = $scope.step_config.options;
+//
+//            }
+//        }
 
 
 
@@ -1541,7 +1789,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
         $scope.startPointList = function(){
         	$scope.tool_bar_state = 'pldefine';
-        	$rootScope.imageviewer.setDrawMode('pointlist');
+        	$scope.setDrawMode('pointlist');
         }
 
 
@@ -1556,7 +1804,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.startRegionPaint = function(){
 
         	$scope.tool_bar_state = 'rpdefine';
-            $rootScope.imageviewer.setDrawMode('paintbrush');
+            $scope.setDrawMode('paintbrush');
         }
 
         $scope.runRegionPaint = function(){
@@ -1567,7 +1815,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
                 $scope.regionPaintDelay();
 
-            }, 100);
+            }, 50);
         }
 
         $scope.regionPaintDelay = function(){
@@ -1576,6 +1824,8 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
             var feature = $scope.getLesionFeature();
             $rootScope.imageviewer.moveToFeature(feature);
+
+            $scope.setDrawMode('paintbrush');
 
         	$rootScope.imageviewer.startPainting();
 
@@ -1600,12 +1850,18 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.navMode = function(){
 
             $rootScope.imageviewer.hidePaintLayerIfVisible()
+            $scope.setDrawMode('navigate');
+
         }
 
         $scope.drawMode = function(){
+
             var feature = $scope.getLesionFeature();
             $rootScope.imageviewer.moveToFeature(feature);
             $rootScope.imageviewer.showPaintLayerIfVisible()
+            $scope.setDrawMode('paintbrush');
+
+
         }
 
 
@@ -1617,7 +1873,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
         $scope.startMagicWand = function(){
             $scope.tool_bar_state = 'mwdefine';
-            $rootScope.imageviewer.setDrawMode('autofill');
+            $scope.setDrawMode('autofill');
         }
 
 
@@ -1627,14 +1883,13 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         $scope.selectDetail = function(detailobj){
             console.log(detailobj);
             $scope.select_detail = detailobj;
-
             $rootScope.imageviewer.selectAnnotationLabel(detailobj.value);
         }
 
 
 		$scope.selectOption = function(key, option_to_select) {
 
-			var selected_url = 'static/rev3/' + $scope.step_base + '/' + (key+1) + '.jpg'
+			var selected_url = 'static/derm/' + $scope.step_base + '/' + (key+1) + '.jpg'
 
 			console.log('selected url', selected_url)
 
@@ -1668,6 +1923,8 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 $scope.gotoStep(option_to_select.value);
 
             }
+
+
 
 
 //			else if (option_to_select.type == 'selectadvanced') {
@@ -2183,7 +2440,7 @@ var decisionTree = derm_app.factory('decisionTree', function($http) {
       return promise;
     },
     fromLocal: function() {
-        var url = 'static/rev3/decisiontree.json';
+        var url = 'static/derm/decisiontree.json';
             var promise = $http.get(url).then(function (response) {
           return response.data;
         });
@@ -2201,14 +2458,16 @@ var decisionTree = derm_app.factory('decisionTree', function($http) {
 // handle window resize events
 function updateLayout() {
 
+    $("#angular_id").height(window.innerHeight);
+    $("#annotationView").height(window.innerHeight);
+
+
     var scope = angular.element($("#angular_id")).scope();
     scope.safeApply(function(){
 
-        $("#angular_id").height(window.innerHeight);
-        $("#annotationView").height(window.innerHeight);
 
         console.log(window.innerWidth, window.innerHeight);
-//1920 1106
+        //1920 1106
     })
 }
 

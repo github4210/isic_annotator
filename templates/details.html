@@ -166,7 +166,7 @@
         </a>
 
         <ul>
-            <li ng-repeat="opt in opt.options" ng-include="'field_renderer.html'"></li>
+            <li ng-show="opt.type!='choice'" ng-repeat="opt in opt.options" ng-include="'field_renderer.html'"></li>
         </ul>
     </script>
 
@@ -176,12 +176,26 @@
         <div class="row bigrow">
             <div class="col-sm-12">
 
-                <h2>Current details</h2>
+                <p><a href="static/derm/decisiontree.json">JSON definition</a></p>
 
-                <p><a href="static/rev3/decisiontree.json">JSON definition</a></p>
+                <h4>Single feature</h4>
 
                 <ul>
-                    <li ng-repeat="opt in step_options" ng-include="'field_renderer.html'"></li>
+                    <li ng-repeat="opt in step_options[3].options" ng-include="'field_renderer.html'"></li>
+                    <br>
+                </ul>
+
+                <h4>Secondary feature</h4>
+
+                <ul>
+                    <li ng-repeat="opt in step_options[4].options" ng-include="'field_renderer.html'"></li>
+                    <br>
+                </ul>
+
+                <h4>Details</h4>
+
+                <ul>
+                    <li ng-repeat="opt in step_options[5].options" ng-include="'field_renderer.html'"></li>
                     <br>
                 </ul>
 
