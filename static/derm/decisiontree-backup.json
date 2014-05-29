@@ -257,7 +257,7 @@
                 "type": "drop",
                 "options": [
                     {
-                        "title": "Central structureless",
+                        "title": "Central clods",
                         "type": "dropchoice",
                         "options": [
                             {
@@ -284,7 +284,34 @@
                         ]
                     },
                     {
-                        "title": "Central clods",
+                        "title": "Central hyperpigmentation",
+                        "type": "dropchoice",
+                        "options": [
+                            {
+                                "title": "Are there any additional details you would like to add?",
+                                "type": "choice",
+                                "options": [
+                                    {
+                                        "title": "Yes",
+                                        "type": "gotostep",
+                                        "value": 5
+                                    },
+                                    {
+                                        "title": "No",
+                                        "type": "gotostep",
+                                        "value": 6
+                                    },
+                                    {
+                                        "title": "Go Back",
+                                        "type": "gotostep",
+                                        "value": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Central Hypopigmentation",
                         "classification": "lesion",
                         "type": "dropchoice",
                         "options": [
@@ -825,7 +852,7 @@
     },
     {
         "step": 6,
-        "title": "Final Review",
+        "title": "Review",
         "type": "end",
         "next": 7,
         "default": "",

@@ -38,16 +38,16 @@
         color: #fff;
 
         width: 500px;
-        /*min-height: 180px;*/
-        /*padding-bottom: 10px;*/
-        position: absolute;
-        /*background: #272822;*/
-        background: black;
         left: 10px;
         top: 10px;
-        /*padding: 3px !important;*/
+
+        position: absolute;
+
+        background: black;
+        background-image:url('/static/dark_fish_skin.png') !important;
+        background-repeat:repeat;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
-        /*border: 1px #aaa solid;*/
+
     }
 
     #hoverBar {
@@ -90,17 +90,10 @@
     }
 
     .imagePreview {
-
-        /*overflow: auto;*/
-        /*overflow-y: hidden;*/
-        /*overflow-x: scroll;*/
-        /*height: 65px;*/
-        padding: 2px;
+        padding: 1px;
+        padding-top: 10px;
         margin-left: 5px;
-        /*margin-top: 10px;*/
-        /*margin-bottom: 10px;*/
         height: 200px;
-        /*background: #f00;*/
     }
 
     .imagePreviewInner {
@@ -118,18 +111,41 @@
         bottombottom:0px; /* position will be on bottom */
         left:0px;
         width:100%;
-        /* styling bellow */
-        background-color:black;
-        font-family: 'tahoma';
-        font-size:15px;
+        /* styling below */
+        background-color:transparent;
+        font-family: 'Avenir Next';
+        font-weight: 700;
+        /*font-size:13px;*/
         color:white;
-        opacity:0.6; /* transparency */
-        filter:alpha(opacity=60); /* IE transparency */
+        /*opacity:0.6; *//* transparency */
+        /*filter:alpha(opacity=60); *//* IE transparency */
     }
+
+    /*div.description{*/
+        /*position:absolute; *//* absolute position (so we can position it where we want)*/
+        /*bottombottom:0px; *//* position will be on bottom */
+        /*left:0px;*/
+        /*width:100%;*/
+        /* styling below */
+        /*background-color:black;*/
+        /*font-family: 'Avenir Next';*/
+        /*font-weight: 700;*/
+        /*font-size:13px;*/
+        /*color:white;*/
+        /*opacity:0.6; *//* transparency */
+        /*filter:alpha(opacity=60); *//* IE transparency */
+    /*}*/
+
     p.description_content{
-        padding:10px;
+        padding:3px;
+        padding-left: 10px;
         margin:0px;
     }
+
+    .givedropshadow {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+    }
+
 
 
     .imagethumb {
@@ -234,7 +250,8 @@
     {
         /*background-color:black;*/
 
-        background-color: rgb(62, 64, 54);
+        /*background-color: rgb(62, 64, 54);*/
+        background: #282727;
         /*background-color: rgb(62, 64, 54);*/
         width: 100%;
         padding-top: 4px;
@@ -258,10 +275,10 @@
 
     .btncontainer {
         max-height: 28px;
-        max-width: 40px;
+        width: 120px;
         float: left;
         margin-left: 4px;
-        background-color: #fff;
+        /*background-color: #fff;*/
     }
 
     .btnimage {
@@ -276,7 +293,9 @@
 
 
     .modal-content {
-        background-color: rgb(39, 40, 34);
+        /*background-color: rgb(39, 40, 34);*/
+        background-color: #000;
+        border: 1px solid #666;
     }
 
     .modal-body {
@@ -315,7 +334,8 @@
 
     .isichead {
 
-        background-color: rgb(62, 64, 54);
+        background: #171616;
+        /*background-color: rgb(62, 64, 54);*/
         /*background: #000;*/
         color: #fff;
 
@@ -340,9 +360,14 @@
 
     }
 
+    nav {
+        width: 100%;
+        z-index: 200;
+    }
+
     .step-header {
-        background: #000;
-        color: #666;
+        background: #282727;
+        color: #fff;
         font-size: 12pt;
         font-weight: 300;
         /*margin-top:10px;*/
@@ -351,22 +376,34 @@
         padding-top:10px;
         padding-left: 10px;
         border-bottom: 1px solid #333;
+
+        /*-webkit-box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.7);*/
+        /*-moz-box-shadow: 1px 7px 11px 2px rgba(0,0,0,0.7);*/
+
+        box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.7);
+
+
+    }
+
+    .content-group {
+        padding-top: 9px;
+        padding-bottom: 5px;
     }
 
 
     /*.step-header:hover {*/
         /*background-color: #1a191c;*/
 
-        /*-webkit-box-shadow: 1px 7px 11px 2px rgba(0,0,0,0.7);*/
-        /*-moz-box-shadow: 1px 7px 11px 2px rgba(0,0,0,0.7);*/
-        /*box-shadow: 1px 7px 11px 2px rgba(0,0,0,0.7);*/
+
     /*}*/
 
+
+
     .step-content {
-        padding-top: 7px;
+        /*padding-top: 7px;*/
         padding-left: 5px;
         padding-right: 5px;
-        padding-bottom: 7px;
+        /*padding-bottom: 7px;*/
     }
 
     .step-active
@@ -433,6 +470,20 @@
 
     .labelgreen {
 
-        color: #27ff2c;
+        color: #aeaeae;
     }
 
+
+.modal.fade {
+  opacity: 1;
+}
+
+.modal.fade .modal-dialog, .modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop {
+   opacity: 0.8 !important;
+}

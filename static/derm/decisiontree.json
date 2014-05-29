@@ -276,8 +276,8 @@
         "type": "drop", 
         "options": [
           {
-            "longtitle": "Peripheral reticular: Central structureless", 
-            "icon": "static/derm/images/4-peripheralreticular_centralstructureless.jpg", 
+            "longtitle": "Peripheral reticular: Central clods", 
+            "icon": "static/derm/images/4-peripheralreticular_centralclods.jpg", 
             "type": "dropchoice", 
             "options": [
               {
@@ -302,12 +302,41 @@
                 "title": "Are there any additional details you would like to add?"
               }
             ], 
-            "title": "Central structureless"
+            "title": "Central clods"
+          }, 
+          {
+            "longtitle": "Peripheral reticular: Central hyperpigmentation", 
+            "icon": "static/derm/images/4-peripheralreticular_centralhyperpigmentation.jpg", 
+            "type": "dropchoice", 
+            "options": [
+              {
+                "type": "choice", 
+                "options": [
+                  {
+                    "type": "gotostep", 
+                    "value": 5, 
+                    "title": "Yes"
+                  }, 
+                  {
+                    "type": "gotostep", 
+                    "value": 6, 
+                    "title": "No"
+                  }, 
+                  {
+                    "type": "gotostep", 
+                    "value": 4, 
+                    "title": "Go Back"
+                  }
+                ], 
+                "title": "Are there any additional details you would like to add?"
+              }
+            ], 
+            "title": "Central hyperpigmentation"
           }, 
           {
             "classification": "lesion", 
-            "title": "Central clods", 
-            "longtitle": "Peripheral reticular: Central clods", 
+            "title": "Central Hypopigmentation", 
+            "longtitle": "Peripheral reticular: Central Hypopigmentation", 
             "type": "dropchoice", 
             "options": [
               {
@@ -332,7 +361,7 @@
                 "title": "Are there any additional details you would like to add?"
               }
             ], 
-            "icon": "static/derm/images/4-peripheralreticular_centralclods.jpg"
+            "icon": "static/derm/images/4-peripheralreticular_centralhypopigmentation.jpg"
           }
         ], 
         "title": "Peripheral reticular"
@@ -962,7 +991,7 @@
     ]
   }, 
   {
-    "title": "Final Review", 
+    "title": "Review", 
     "default": "", 
     "next": 7, 
     "step": 6, 

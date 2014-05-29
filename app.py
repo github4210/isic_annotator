@@ -908,7 +908,6 @@ def annotationCreateEndPoint():
                 # create an annotation
 
                 annotation = json_data
-
                 annotation['image_record_id'] = image_data['record_id']
                 # annotation['user_id'] = json_data['user_id']
                 # annotation['annotation'] = json_data['annotation']
@@ -926,9 +925,8 @@ def annotationCreateEndPoint():
 
                 image_collection.save(image_from_db)
 
-
-
                 response_dict['status'] = 'Annotation saved successfully'
+                response_dict['annotation_id'] = str(annotation_id)
 
             else:
 
@@ -959,6 +957,71 @@ def imageEndPoint(start_index, count):
 
         # result = image_collection.find({}, {'_id': False}, limit=count, skip=start_index).sort("Study_num", 1)
         query = {"study_id": { "$regex" : ".*uda.*" }}
+        filter = {'_id': False}
+
+
+        result = image_collection.find(query, filter, limit=count, skip=start_index).sort("Study_num", 1)
+
+
+        # {"study_id" : {$regex : ".*uda.*"}}).count()
+
+        return json.dumps(list(result))
+
+    else:
+
+        return '{}'
+
+
+
+##### Get a subset of images
+#
+#	/images/{start}/{count}
+#
+# Returns a subset ({count}) of images, starting at {start}
+
+@app.route('/newimages/<int:start_index>/<int:count>/', methods=['GET'])
+def newimageEndPoint(start_index, count):
+
+    if g.user is not None:
+        import json
+
+        # result = image_collection.find({}, {'_id': False}, limit=count, skip=start_index).sort("Study_num", 1)
+        query = {"study_id": { "$regex" : ".*uda.*" }}
+
+        query = {
+            "study_id" : { "$regex" : ".*uda.*"},
+            "annotation" : { '$exists' : False }
+        }
+
+        filter = {'_id': False}
+
+
+        result = image_collection.find(query, filter, limit=count, skip=start_index).sort("Study_num", 1)
+
+
+        # {"study_id" : {$regex : ".*uda.*"}}).count()
+
+        return json.dumps(list(result))
+
+    else:
+
+        return '{}'
+
+
+@app.route('/annotatedimages/<int:start_index>/<int:count>/', methods=['GET'])
+def annotatedimageEndPoint(start_index, count):
+
+    if g.user is not None:
+        import json
+
+        # result = image_collection.find({}, {'_id': False}, limit=count, skip=start_index).sort("Study_num", 1)
+        query = {"study_id": { "$regex" : ".*uda.*" }}
+
+        query = {
+            "study_id" : { "$regex" : ".*uda.*"},
+            "annotation" : { '$exists' : True }
+        }
+
         filter = {'_id': False}
 
 
