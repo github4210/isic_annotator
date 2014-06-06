@@ -192,11 +192,25 @@
 
             <div class="" ng-repeat="(key, value) in decision_tree">
 
-                <div ng-show="smartShowHeader(key)" class="step-header">
+                <div ng-show="smartShowHeader(key)"
+                     class="step-header">
 
-                    <div ng-click="gotoStep(key)" class="btn-group">
+                    <div class="btn-group">
+                        <div type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"
+                             ng-show="showIfStep(key)">
+                          <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" ng-click="previousStep()">Go back</a></li>
+                          <li><a href="#" ng-click="gotoStep(0)">Restart this image</a></li>
+                          <li><a href="#" ng-click="">Flag this image</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" ng-click="showHelp(key))">Get help for this step</a></li>
 
-                        <div ng-class="stepHasAnnotations(key) ? 'btn labelgreen' : 'btn'">
+                        </ul>
+
+                        <div ng-click="gotoStep(key)"
+                             ng-class="stepHasAnnotations(key) ? 'btn labelgreen' : 'btn'">
                             {{value.title}}
                         </div>
 
@@ -276,7 +290,7 @@
                             Show contours
                         </div>
 
-                        <div class="btn btn-inverse" disabled>
+                        <div class="btn btn-inverse" disabled style="max-width: 200px;">
                             {{select_detail.title}}
                         </div>
 
@@ -318,10 +332,6 @@
                             <img class="btnimage" ng-src="{{select_pattern.get('icon')}}" tooltip="{{ select_pattern.get('title') }}"/>
                         </div>
                     </div>
-
-
-
-
 
 
 

@@ -1608,10 +1608,15 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 //        }
 
         $scope.previousStep = function(){
-            $scope.gotoStep($scope.step-1);
+
+            if($scope.step > 0){
+                $scope.gotoStep($scope.step-1);
+            }
+
+
         }
 
-        $scope.help = function(help_val)
+        $scope.showHelp = function(help_val)
         {
             alert('help!');
         }

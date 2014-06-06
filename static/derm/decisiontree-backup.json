@@ -29,7 +29,7 @@
     },
     {
         "step": 3,
-        "title": "Is the lesion entirely composed of one structure and one color?",
+        "title": "Is lesion entirely composed of one structure and one color?",
         "classification": "lesion",
         "zoom": "lesion",
         "type": "select",
