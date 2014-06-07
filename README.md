@@ -1,15 +1,19 @@
-ISIC Dermoscopic Annotator
-==============
+### ISIC Derm Annotator app
 
-Deploy simple application framework
+Rich Stoner, 2014
 
-[https://github.com/richstoner/simple-application-framework](https://github.com/richstoner/simple-application-framework)
+##### Install
 
-Clone this repo into apps folder
+To be used with: https://github.com/richstoner/simple-application-framework
 
-`git clone https://github.com/richstoner/isic_annotator.git annotatordev`
+`fab last addApp:appname=annotatordev,giturl=https://github.com/richstoner/isic_annotator.git`
 
-Sync, Enable, Start
+`fab last enableApp:annotatordev`
 
+You can now start this app via the supervisor configuration
 
+##### To update the app from git after enabled:
 
+`fab last updateApp:annotatordev`
+
+`fab last restartAll` (this could be more elegant!)
