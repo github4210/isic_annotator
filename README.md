@@ -2,7 +2,7 @@
 
 Rich Stoner, 2014
 
-##### Install
+#### Install
 
 To be used with: https://github.com/richstoner/simple-application-framework
 
@@ -17,3 +17,9 @@ You can now start this app via the supervisor configuration
 `fab last updateApp:annotatordev`
 
 `fab last restartAll` (this could be more elegant!)
+
+
+
+#### Application structure
+
+
