@@ -617,14 +617,14 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                     newHeight = -bl[1];
                 };
                 if(tl[1] < 0) {
-                    newHeight += tl[1]
+                    newHeight += tl[1];
                     origin_y = -tl[1];
                 }                
 
                 console.log(origin_x, origin_y, newWidth, newHeight);
 
                 if (newWidth <= 0 || newHeight <= 0){
-                    console.log('offscreen or invalid region')
+                    console.log('offscreen or invalid region');
                 };
 
                 var rel = []
@@ -635,37 +635,37 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
                 var dataurl = function(rel, width){
                     return '&WID=' + width + '&RGN=' + rel.join(',') + '&CVT=jpeg'
-                }
+                };
 
                 // var url_to_use = this.data_url + '&WID=400&RGN=0.25,0.25,0.5,0.5&CVT=jpeg'
                 var url_to_use = this.data_url + dataurl(rel, 500);
 
-                var subimage = {}
-                subimage.origin = [origin_x, origin_y]
-                subimage.size = [newWidth, newHeight]
+                var subimage = {};
+                subimage.origin = [origin_x, origin_y];
+                subimage.size = [newWidth, newHeight];
                 subimage.rel = rel;
-                var origimage = {}
-                origimage.origin = [0,0]
-                origimage.size = [this.nativeSize.w, this.nativeSize.h]
+                var origimage = {};
+                origimage.origin = [0,0];
+                origimage.size = [this.nativeSize.w, this.nativeSize.h];
 
 
                 // relative click is not based on the image origin, but rather the extent origin
-                var click = {}
+                var click = {};
                 click.absolute = click_coords;
                 click.relative = [(click_coords[0])/this.nativeSize.w, (click_coords[1])/this.nativeSize.h]
 
 
-                var msg = {}
-                msg.image = {}
-                msg.image.region = subimage
-                msg.image.base = origimage
-                msg.image.url = url_to_use
+                var msg = {};
+                msg.image = {};
+                msg.image.region = subimage;
+                msg.image.base = origimage;
+                msg.image.url = url_to_use;
                 msg.tolerance = this.fill_tolerance;
-                msg.click = click
+                msg.click = click;
 
                 // console.log(msg);
 
-                var segmentURL = 'fill'
+                var segmentURL = 'fill';
 
                 $http.post(segmentURL, msg).success(function(response){
 

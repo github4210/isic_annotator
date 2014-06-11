@@ -230,6 +230,14 @@
                 <div ng-show="smartShowContent(key)" class="step-content">
 
                     <div ng-show="compareState('image', tool_bar_state)">
+
+                        <div class="btn-group content-group">
+                                <div class="btn btn-inverse">Selected:
+                                    {{ current_image.study_id }}
+                                </div>
+                        </div>
+
+
                         <div class="imagePreview">
 
                             <div class='wrapper' ng-repeat="(i, v) in image_list">
@@ -244,11 +252,7 @@
                             </div>
                         </div>
 
-                        <div class="btn-group content-group">
-                                <div class="btn btn-inverse">Selected:
-                                    {{ current_image.study_id }}
-                                </div>
-                        </div>
+
                     </div>
 
                      <!-- magic wand -->
