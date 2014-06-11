@@ -268,6 +268,22 @@
                     </div>
 
 
+
+                    <div class="btn-group content-group"
+                         ng-show="compareState('superpixel', tool_bar_state)">
+
+                        <div class="btn btn-primary"
+                             ng-click="increaseParameter()">
+                            <i class="fa fa-chevron-up"></i></div>
+                        <div class="btn btn-primary"
+                             ng-click="decreaseParameter()">
+                            <i class="fa fa-chevron-down"></i></div>
+
+                        <div class="btn" disabled>Tolerance:
+                            <b>{{regionpaint_size}}</b></div>
+                    </div>
+
+
                     <div class="btn-group content-group"
                          ng-show="compareState('pldefine', tool_bar_state)">
 
@@ -365,6 +381,20 @@
                                 Click to begin
                         </div>
                     </div>
+
+
+                    <div class="btn-group pull-right content-group"
+                         ng-show="compareState('superpixel', tool_bar_state)">
+                        <div class="btn btn-inverse" ng-show="runningSegmentation">
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </div>
+
+                        <div class="btn btn-inverse"
+                                ng-click="runRegionPaintConfigure()">
+                                Click to begin
+                        </div>
+                    </div>
+
 
                     <div class="btn-group content-group"
                          ng-show="stepHasDropDownOptions()">
