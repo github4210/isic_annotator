@@ -130,13 +130,14 @@
 
     <div ng-controller="AnnotationView" id="viewContainer">
 
-        <div id="map" class="map"></div>
+
         <div id="annotatorcontainer"></div>
         <div id="hoverBar"><img id="objectinfo" style="display:none;" class="optionimage" src="static/na.jpg"></img>
-
         </div>
 
-        <div id="toolContainer" ng-controller="AnnotationTool">
+
+
+        <div class="col-sm-3" id="toolContainer" ng-controller="AnnotationTool">
 
             <div class="isichead">
                 <span class="isictitle pull-left">
@@ -443,6 +444,9 @@
                 </div>
             </div>
         </div>
+
+        <div id="map" class="map col-sm-9"></div>
+
     </div>
 
 
