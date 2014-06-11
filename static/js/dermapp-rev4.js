@@ -544,6 +544,8 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                     }
                     else {
 
+                        console.log("input", canvas);
+
                         self.segmentannotator = new SLICSegmentAnnotator(canvas, {
                             regionSize: 65,
                             container: document.getElementById('annotatorcontainer'),
