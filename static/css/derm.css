@@ -51,6 +51,10 @@
 
     }
 
+    .nopad {
+        padding: 0px;
+    }
+
     #hoverBar {
 
         width: 100px;
