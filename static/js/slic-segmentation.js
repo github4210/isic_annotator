@@ -506,6 +506,8 @@
       options.minRegionSize = options.regionSize * options.regionSize / 4;
     }
 
+    console.log(canvas_image);
+
     var canvas = document.createElement('canvas');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
