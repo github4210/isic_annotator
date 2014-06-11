@@ -162,6 +162,8 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
             this.last_job_id = undefined;
             this.fill_tolerance = 50;
 
+            this.paint_size = 70;
+
 //            this.select_interaction = new ol.interaction.Select();
 //            this.selected_features = this.select_interaction.getFeatures();
 //            var collection = select.getFeatures();
@@ -547,7 +549,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
                         console.log("input", canvas);
 
                         self.segmentannotator = new SLICSegmentAnnotator(canvas, {
-                            regionSize: 65,
+                            regionSize: self.paint_size,
                             container: document.getElementById('annotatorcontainer'),
                             backgroundColor: [0,0,0],
                             labels: _labels,
@@ -571,11 +573,12 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
             },
 
             setFillParameter : function(new_fill_tolerance){
-
                 this.fill_tolerance = new_fill_tolerance;
-
-
             },
+
+            setPaintParameter : function(new_paint_size){
+                this.paint_size = new_paint_size;
+            };
 
             regenerateFill : function(){
 
@@ -1642,7 +1645,8 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
             else if ($scope.tool_bar_state == 'superpixel'){
 
                 $scope.regionpaint_size += 5;
-
+                $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
+                $scope.imageviewer.runRegionPaintConfigure();
                 //
 
             }
@@ -1670,6 +1674,9 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 else {
                     $scope.regionpaint_size = 0;
                 }
+
+                $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
+                $scope.imageviewer.runRegionPaintConfigure();
 
                 //
             }
