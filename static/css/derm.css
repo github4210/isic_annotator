@@ -43,6 +43,7 @@
 
         /*position: absolute;*/
 
+        padding: 0px;
         background: black;
         background-image:url('/static/dark_fish_skin.png') !important;
         background-repeat:repeat;
