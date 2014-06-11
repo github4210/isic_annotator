@@ -1642,7 +1642,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 $scope.imageviewer.setFillParameter($scope.magicwand_tolerance);
                 $scope.imageviewer.regenerateFill();
             }
-            else if ($scope.tool_bar_state == 'superpixel'){
+            else if ($scope.tool_bar_state == 'spconfirm'){
 
                 $scope.regionpaint_size += 5;
                 $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
@@ -1666,7 +1666,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 $scope.imageviewer.setFillParameter($scope.magicwand_tolerance);
                 $scope.imageviewer.regenerateFill();
             }
-            else if ($scope.tool_bar_state == 'superpixel'){
+            else if ($scope.tool_bar_state == 'spconfirm'){
 
                 if($scope.regionpaint_size >= 5){
                     $scope.regionpaint_size -= 5;
