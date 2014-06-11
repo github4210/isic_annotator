@@ -1646,7 +1646,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
                 $scope.regionpaint_size += 5;
                 $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
-                $scope.imageviewer.runRegionPaintConfigure();
+                $scope.runRegionPaintConfigure();
                 //
 
             }
@@ -1676,7 +1676,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 }
 
                 $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
-                $scope.imageviewer.runRegionPaintConfigure();
+                $scope.runRegionPaintConfigure();
 
                 //
             }
