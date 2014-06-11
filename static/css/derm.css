@@ -14,7 +14,7 @@
 
     #map {
         height: 700px;
-        width: 100%;
+        /*width: 100%;*/
         /*background-image:url('static/images/gridme.png');*/
         /*background-repeat:repeat;*/
         background: #1d1e18;
