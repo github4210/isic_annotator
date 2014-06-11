@@ -509,8 +509,10 @@
     console.log(canvas_image);
 
     var canvas = document.createElement('canvas');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = canvas_image.width;
+    canvas.height = canvas_image.height;
+//    canvas.width = window.innerWidth;
+//    canvas.height = window.innerHeight;
 
     var context = canvas.getContext('2d');
     context.drawImage(canvas_image, 0, 0, canvas.width, canvas.height);
