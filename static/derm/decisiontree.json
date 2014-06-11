@@ -33,6 +33,7 @@
         "classification": "tile",
         "type": "superpixel",
         "default" : "superpixel",
+        "zoom": "lesion",
         "next": 4,
         "options" : []
     },
@@ -40,6 +41,7 @@
         "step": 4,
         "title": "Review",
         "type": "end",
+        "zoom": "lesion",
         "next": 5,
         "default": "",
         "options": []
