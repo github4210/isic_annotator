@@ -1927,7 +1927,35 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 $scope.regionPaintDelay();
 
             }, 50);
-        }
+        };
+
+        // TODO consider combining independent functions into switched
+
+        $scope.runRegionPaintConfigure = function(){
+
+            $scope.runningSegmentation = true;
+
+            $timeout(function(){
+
+                $scope.regionPaintConfigureDelay();
+
+            }, 50);
+        };
+
+        $scope.regionPaintConfigureDelay = function(){
+
+            $scope.tool_bar_state = 'spconfirm';
+
+            var feature = $scope.getLesionFeature();
+            $rootScope.imageviewer.moveToFeature(feature);
+
+            $scope.setDrawMode('none', '');
+
+        	$rootScope.imageviewer.startPainting();
+
+            $scope.runningSegmentation = false;
+        };
+
 
         $scope.regionPaintDelay = function(){
 
@@ -1941,7 +1969,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         	$rootScope.imageviewer.startPainting();
 
             $scope.runningSegmentation = false;
-        }
+        };
 
         $scope.finishRegionPaint = function(){
 

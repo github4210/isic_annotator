@@ -270,7 +270,7 @@
 
 
                     <div class="btn-group content-group"
-                         ng-show="compareState('superpixel', tool_bar_state)">
+                         ng-show="compareState('spconfirm', tool_bar_state)">
 
                         <div class="btn btn-primary"
                              ng-click="increaseParameter()">
@@ -338,6 +338,8 @@
 
 
 
+
+
                     <div class="btn-group content-group"
                          ng-show="compareState('select', tool_bar_state)">
 
@@ -394,6 +396,15 @@
                                 Click to begin
                         </div>
                     </div>
+
+                    <div class="btn-group pull-right content-group"
+                         ng-show="compareState('spconfirm', tool_bar_state)">
+                        <div class="btn btn-inverse"
+                                ng-click="nextStep()">
+                               Accept region size
+                        </div>
+                    </div>
+
 
 
                     <div class="btn-group content-group"
