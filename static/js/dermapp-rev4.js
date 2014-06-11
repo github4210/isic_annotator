@@ -1646,6 +1646,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
 
                 $scope.regionpaint_size += 5;
                 $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
+                $scope.imageviewer.clearPaintByNumber();
                 $scope.runRegionPaintConfigure();
                 //
 
@@ -1676,6 +1677,7 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
                 }
 
                 $scope.imageviewer.setPaintParameter($scope.regionpaint_size);
+                $scope.imageviewer.clearPaintByNumber();
                 $scope.runRegionPaintConfigure();
 
                 //
@@ -1993,26 +1995,24 @@ var annotationTool = derm_app.controller('AnnotationTool', ['$scope', '$rootScop
         	$rootScope.imageviewer.clearTemporary();
 
         	$scope.resetStep();
-        }
+        };
 
         $scope.navMode = function(){
 
             $rootScope.imageviewer.hidePaintLayerIfVisible()
             $scope.setDrawMode('navigate', '');
 
-        }
+        };
 
         $scope.drawMode = function(){
 
             var feature = $scope.getLesionFeature();
             $rootScope.imageviewer.moveToFeature(feature);
-            $rootScope.imageviewer.showPaintLayerIfVisible()
+            $rootScope.imageviewer.showPaintLayerIfVisible();
             $scope.setDrawMode('paintbrush', '');
 
 
-        }
-
-
+        };
 
 
 
