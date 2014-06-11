@@ -509,8 +509,8 @@
     console.log(canvas_image);
 
     var canvas = document.createElement('canvas');
-    canvas.width = canvas_image.width;
-    canvas.height = canvas_image.height;
+    canvas.width = canvas_image.width / window.devicePixelRatio;
+    canvas.height = canvas_image.height /  window.devicePixelRatio;
 //    canvas.width = window.innerWidth;
 //    canvas.height = window.innerHeight;
 
