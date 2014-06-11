@@ -578,7 +578,7 @@ var olViewer = derm_app.factory('olViewer', function(ol, $http, xmlParser) {
 
             setPaintParameter : function(new_paint_size){
                 this.paint_size = new_paint_size;
-            };
+            },
 
             regenerateFill : function(){
 
